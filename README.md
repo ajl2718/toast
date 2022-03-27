@@ -2,5 +2,13 @@
 
 This repo contains jupyter notebooks and utils functions for scraping different websites.
 
+## Requirements
+
+The usual Python packages from making HTTP requests and parsing data:
+
+- requests
+- lxml
+- pandas
+
 ## GP Scraper
 For scraping the locations of general practice locations in Victoria
