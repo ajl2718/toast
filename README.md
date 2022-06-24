@@ -1,6 +1,6 @@
 # Toast: a collection of webscrapers for various applications
 
-This repo contains jupyter notebooks and utils functions for scraping different websites.
+This repo contains jupyter notebooks and utils functions for scraping different websites. If using any of these, make sure to pay attention to terms of use of the website and ensure that requests being made to the website are limited.
 
 ## Requirements
 
