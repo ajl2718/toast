@@ -12,3 +12,6 @@ The usual Python packages from making HTTP requests and parsing data:
 
 ## GP Scraper
 For scraping the locations of general practice locations in Victoria
+
+## PubMed Scraper
+To extract texts from titles and abstracts of papers available through PubMed. Useful for building up text corpora for training clinical NLP models.
