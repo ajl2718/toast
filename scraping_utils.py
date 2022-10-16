@@ -19,6 +19,9 @@ path_type = f'{property_card}/div/div/div/span[@class="residential-card__propert
 # link
 path_link = f'{property_card}/div/div/h2/a/@href'
 
+# text
+path_text = './/span[@class="property-description__content"]/text()'
+
 def get_property_features(feature_element):
     """
     Get num beds, baths, cars for each property.
@@ -69,23 +72,28 @@ def get_data_from_page(tree):
     addresses = tree.xpath(path_address)
     types = tree.xpath(path_type)
     links = tree.xpath(path_link)
+
+    page_information = {'address': addresses, 'price': prices, 'type': types, 'link': links}
     
     # features in property slightly different as not all have 
     # all features
     feature_elements = tree.xpath(path_features)
+  #  property_text = ' '.join(tree.xpath(path_text))
     
-    cars = []
-    beds = []
-    baths = []
+ #   cars = []
+  #  beds = []
+   # baths = []
     
-    for feature_element in feature_elements:
-        feature_data = get_property_features(feature_element[0])
-        cars.append(feature_data['cars'])
-        beds.append(feature_data['beds'])
-        baths.append(feature_data['baths'])
+  #  for feature_element in feature_elements:
+  #      feature_data = get_property_features(feature_element[0])
+  #      cars.append(feature_data['cars'])
+  #      beds.append(feature_data['beds'])
+  #      baths.append(feature_data['baths'])
+
+
         
-    page_information = {'address': addresses, 'price': prices, 'type': types, 'link': links, 
-                        'cars': cars, 'beds': beds, 'baths': baths}
+   # page_information = {'address': addresses, 'price': prices, 'type': types, 'link': links, 
+   #                     'cars': cars, 'beds': beds, 'baths': baths}
     
     return page_information
 
